@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Kumbh_Sans } from "next/font/google";
 import { Providers } from "./GlobalRedux/provider";
+import Header from "./components/Header";
 
 const kumbh_sans = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={kumbh_sans.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
