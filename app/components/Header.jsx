@@ -14,21 +14,22 @@ export default function Header() {
     setToggleMenu((prev) => !prev);
   };
 
+  // close mobile menu when clicking outside of element
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
   }, []);
+
   const refOne = useRef(null);
+
   const handleClickOutside = (e) => {
     if (!refOne.current.contains(e.target)) {
-      console.log("outside div");
       handleOnClick();
-    } else {
-      console.log("inside div");
     }
   };
 
   return (
-    <nav className="relative">
+    <nav className="relative md:border-b-2 ">
+      {/* mobile menu popup */}
       {toggleMenu && (
         <div className="bg-black/75 absolute h-screen w-screen z-10">
           <div
@@ -66,24 +67,51 @@ export default function Header() {
           </div>
         </div>
       )}
+      {/* header content */}
 
-      <div className="flex items-center justify-between p-5 relative">
-        <div className="flex gap-5">
+      <div className="flex items-center justify-between p-5 relative ">
+        <div className="flex gap-5 md:gap-14 ">
+          {/* mobile only hamburger menu icon */}
           <div
-            className="w-6 flex items-center justify-center"
+            className="w-6 flex items-center justify-center md:hidden"
             onClick={handleOnClick}
           >
             <Image src={menuIcon} alt="Menu icon" width={500} height={500} />
           </div>
-          <div className="w-44 flex items-center justify-center">
+          {/* end hamburger menu icon */}
+          <div className="w-44 flex items-center justify-center md:w-32">
             <Image src={logo} alt="Logo" width={500} height={500} />
           </div>
+          <ul className="hidden md:flex gap-10 text-darkGrayishBlue items-end">
+            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
+              <p className="">Collections</p>
+            </li>
+            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
+              <p className="">Men</p>
+            </li>
+            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
+              <p className="">Women</p>
+            </li>
+            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
+              <p className="">About</p>
+            </li>
+            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
+              <p className="">Contact</p>
+            </li>
+          </ul>
         </div>
-        <div className="flex gap-5">
-          <div className="w-7 flex items-center justify-center">
-            <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
+        <div className="flex gap-10 items-center">
+          <div className="relative">
+            <div className="w-7 flex items-center justify-center">
+              <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
+            </div>
+            {/* cart item quantity */}
+            <div className="bg-primaryOrange flex items-center justify-center rounded-lg absolute bottom-4 -right-2 w-6 md:bottom-4 md:w-5">
+              <p className="text-white text-xs font-normal">3</p>
+            </div>
+            {/* end cart item quantity */}
           </div>
-          <div className="w-6 flex items-center justify-center">
+          <div className="w-6 flex items-center justify-center md:w-10">
             <Image
               src={profileImage}
               alt="Profile Image"
