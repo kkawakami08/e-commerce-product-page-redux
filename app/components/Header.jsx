@@ -73,13 +73,13 @@ export default function Header() {
         <div className="flex gap-5 md:gap-14 ">
           {/* mobile only hamburger menu icon */}
           <div
-            className="w-6 flex items-center justify-center md:hidden"
+            className="w-4 flex items-center justify-center md:hidden"
             onClick={handleOnClick}
           >
             <Image src={menuIcon} alt="Menu icon" width={500} height={500} />
           </div>
           {/* end hamburger menu icon */}
-          <div className="w-44 flex items-center justify-center md:w-32">
+          <div className="w-32 flex items-center justify-center ">
             <Image src={logo} alt="Logo" width={500} height={500} />
           </div>
           <ul className="hidden md:flex gap-10 text-darkGrayishBlue pt-2">
@@ -110,18 +110,18 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <div className="flex gap-10 items-center">
+        <div className="flex gap-5 md:gap-10 items-center">
           <div className="relative">
-            <div className="w-7 flex items-center justify-center hover:cursor-pointer">
+            <div className="w-6 flex items-center justify-center hover:cursor-pointer md:w-7">
               <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
             </div>
             {/* cart item quantity */}
-            <div className="bg-primaryOrange flex items-center justify-center rounded-lg absolute bottom-4 -right-2 w-6 md:bottom-4 md:w-5">
+            <div className="bg-primaryOrange flex items-center justify-center rounded-lg absolute bottom-3  -right-2  w-5 md:bottom-4 md:w-5">
               <p className="text-white text-xs font-normal">3</p>
             </div>
             {/* end cart item quantity */}
           </div>
-          <div className="w-6 flex items-center justify-center md:w-10   ">
+          <div className="w-7 flex items-center justify-center md:w-10   ">
             <Image
               src={profileImage}
               alt="Profile Image"
