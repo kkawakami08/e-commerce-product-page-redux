@@ -82,21 +82,31 @@ export default function Header() {
           <div className="w-44 flex items-center justify-center md:w-32">
             <Image src={logo} alt="Logo" width={500} height={500} />
           </div>
-          <ul className="hidden md:flex gap-10 text-darkGrayishBlue items-end">
-            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
-              <p className="">Collections</p>
+          <ul className="hidden md:flex gap-10 text-darkGrayishBlue pt-2">
+            <li className="">
+              <div className=" hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer h-7">
+                <p>Collections</p>
+              </div>
             </li>
-            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
-              <p className="">Men</p>
+            <li className="">
+              <div className=" hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer h-7">
+                <p>Men</p>
+              </div>
             </li>
-            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
-              <p className="">Women</p>
+            <li className="">
+              <div className=" hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer h-7">
+                <p>Women</p>
+              </div>
             </li>
-            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
-              <p className="">About</p>
+            <li className="">
+              <div className=" hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer h-7">
+                <p>About</p>
+              </div>
             </li>
-            <li className="hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer">
-              <p className="">Contact</p>
+            <li className="">
+              <div className=" hover:border-b-4 border-primaryOrange hover:text-veryDarkBlue hover:cursor-pointer h-7">
+                <p>Contact</p>
+              </div>
             </li>
           </ul>
         </div>
