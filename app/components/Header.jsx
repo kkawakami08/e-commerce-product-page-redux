@@ -112,7 +112,7 @@ export default function Header() {
         </div>
         <div className="flex gap-10 items-center">
           <div className="relative">
-            <div className="w-7 flex items-center justify-center">
+            <div className="w-7 flex items-center justify-center hover:cursor-pointer">
               <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
             </div>
             {/* cart item quantity */}
@@ -121,12 +121,13 @@ export default function Header() {
             </div>
             {/* end cart item quantity */}
           </div>
-          <div className="w-6 flex items-center justify-center md:w-10">
+          <div className="w-6 flex items-center justify-center md:w-10   ">
             <Image
               src={profileImage}
               alt="Profile Image"
               width={500}
               height={500}
+              className="hover:outline  outline-primaryOrange rounded-full hover:cursor-pointer"
             />
           </div>
         </div>
