@@ -4,10 +4,8 @@ import React, { useState } from "react";
 import prevIcon from "../../public/images/icon-previous.svg";
 import nextIcon from "../../public/images/icon-next.svg";
 import Image from "next/image";
-import { product } from "../../productData";
 
-export default function MobileImages() {
-  const imageArray = product.imagesURLs;
+export default function MobileImages({ imageArray }) {
   const [imageIndex, setImageIndex] = useState(1);
 
   const handleNextClick = () => {

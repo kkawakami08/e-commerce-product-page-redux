@@ -1,13 +1,18 @@
 "use client";
-import tempImage from "../public/images/image-product-1.jpg";
-import Image from "next/image";
+import { useState } from "react";
+
 import MobileImages from "./components/MobileImages";
+import { product } from "../productData";
+import ProductDescription from "./components/ProductDescription";
 
 export default function Home() {
+  console.log(product.imagesURLs);
   return (
     <main>
-      <MobileImages />
-      <div>DETAILS</div>
+      <div className="md:hidden">
+        <MobileImages imageArray={product.imagesURLs} />
+      </div>
+      <ProductDescription product={product} />
     </main>
   );
 }
