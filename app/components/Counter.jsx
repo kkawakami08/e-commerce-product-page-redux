@@ -1,12 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import minusIcon from "../../public/images/icon-minus.svg";
 import plusIcon from "../../public/images/icon-plus.svg";
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
+  const incrementCount = () => {
+    setCount((prevCount) => (prevCount += 1));
+    console.log(count);
+  };
+  const decrementCount = () => {
+    if (count == 0) {
+      setCount(0);
+    } else {
+      setCount((prevCount) => (prevCount -= 1));
+    }
+    console.log(count);
+  };
   return (
     <div className="flex items-center w-full bg-lightGrayishBlue rounded-lg p-7 justify-between h-10">
-      <div className="">
+      <div className="" onClick={decrementCount}>
         <Image
           src={minusIcon}
           alt="Minus Icon"
@@ -16,8 +30,8 @@ export default function Counter() {
         />
       </div>
       {/* redux count variable */}
-      <p className="font-bold">0</p>
-      <div className="">
+      <p className="font-bold">{count}</p>
+      <div className="" onClick={incrementCount}>
         <Image
           src={plusIcon}
           alt="Plus Icon"
