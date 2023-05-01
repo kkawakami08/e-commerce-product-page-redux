@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import menuIcon from "../../public/images/icon-menu.svg";
 import logo from "../../public/images/logo.svg";
@@ -14,30 +14,14 @@ export default function Header() {
     setToggleMenu((prev) => !prev);
   };
 
-  // close mobile menu when clicking outside of element
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-  }, []);
-
-  const refOne = useRef(null);
-
-  const handleClickOutside = (e) => {
-    if (!refOne.current.contains(e.target)) {
-      handleOnClick();
-    }
-  };
-
   return (
     <nav className="relative md:border-b-2 ">
       {/* mobile menu popup */}
       {toggleMenu && (
         <div className="bg-black/75 absolute h-screen w-screen z-10">
-          <div
-            className="bg-white h-full  w-7/12 p-5 flex flex-col gap-10"
-            ref={refOne}
-          >
+          <div className="bg-white h-full  w-7/12 p-5 flex flex-col gap-10">
             <div
-              className="w-4 flex items-center justify-center"
+              className="w-4 flex items-center justify-center hover:cursor-pointer"
               onClick={handleOnClick}
             >
               <Image
@@ -70,10 +54,10 @@ export default function Header() {
       {/* header content */}
 
       <div className="flex items-center justify-between p-5 relative ">
-        <div className="flex gap-5 md:gap-14 ">
+        <div className="flex gap-5 md:gap-10 ">
           {/* mobile only hamburger menu icon */}
           <div
-            className="w-4 flex items-center justify-center md:hidden"
+            className="w-4 flex items-center justify-center md:hidden hover:cursor-pointer"
             onClick={handleOnClick}
           >
             <Image src={menuIcon} alt="Menu icon" width={500} height={500} />

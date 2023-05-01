@@ -1,9 +1,13 @@
 "use client";
+import tempImage from "../public/images/image-product-1.jpg";
+import Image from "next/image";
+import MobileImages from "./components/MobileImages";
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-primaryOrange">Kaori</h1>
+      <MobileImages />
+      <div>DETAILS</div>
     </main>
   );
 }
