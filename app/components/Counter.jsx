@@ -8,7 +8,6 @@ export default function Counter() {
   const [count, setCount] = useState(0);
   const incrementCount = () => {
     setCount((prevCount) => (prevCount += 1));
-    console.log(count);
   };
   const decrementCount = () => {
     if (count == 0) {
@@ -16,11 +15,10 @@ export default function Counter() {
     } else {
       setCount((prevCount) => (prevCount -= 1));
     }
-    console.log(count);
   };
   return (
     <div className="flex items-center w-full bg-lightGrayishBlue rounded-lg p-7 justify-between h-10">
-      <div className="" onClick={decrementCount}>
+      <div className=" px-10 py-5" onClick={decrementCount}>
         <Image
           src={minusIcon}
           alt="Minus Icon"
@@ -31,7 +29,7 @@ export default function Counter() {
       </div>
       {/* redux count variable */}
       <p className="font-bold">{count}</p>
-      <div className="" onClick={incrementCount}>
+      <div className="px-10 py-5" onClick={incrementCount}>
         <Image
           src={plusIcon}
           alt="Plus Icon"

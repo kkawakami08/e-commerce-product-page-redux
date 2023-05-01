@@ -6,7 +6,7 @@ export default function ProductDescription({ product }) {
   const { name, description, price } = product;
 
   return (
-    <div className="p-5 flex flex-col gap-6 w-screen ">
+    <div className="p-5 flex flex-col gap-6 w-screen pb-36">
       <p className="font-bold text-primaryOrange tracking-widest ">
         SNEAKER COMPANY
       </p>
