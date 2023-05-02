@@ -6,7 +6,7 @@ import nextIcon from "../../public/images/icon-next.svg";
 import Image from "next/image";
 
 export default function MobileImages({ imageArray }) {
-  const [imageIndex, setImageIndex] = useState(1);
+  const [imageIndex, setImageIndex] = useState(0);
 
   const handleNextClick = () => {
     setImageIndex((prevIndex) => {
