@@ -25,9 +25,9 @@ export default function MobileImages({ imageArray }) {
     });
   };
   return (
-    <div className="relative">
+    <div className="relative flex justify-center">
       <div
-        className=" absolute bg-white w-10 flex items-center justify-center h-10 rounded-full top-1/2 left-7"
+        className=" absolute bg-primaryOrange w-10 flex items-center justify-center h-10 rounded-full top-1/2 left-7"
         onClick={handlePrevClick}
       >
         <Image
@@ -39,7 +39,7 @@ export default function MobileImages({ imageArray }) {
         />
       </div>
       <div
-        className=" absolute bg-white w-10 flex items-center justify-center h-10 rounded-full top-1/2 right-7"
+        className=" absolute bg-primaryOrange w-10 flex items-center justify-center h-10 rounded-full top-1/2 right-7"
         onClick={handleNextClick}
       >
         <Image
