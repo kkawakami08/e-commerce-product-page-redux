@@ -42,6 +42,8 @@ const cartSlice = createSlice({
     },
     emptyCart: (state) => {
       state.cartItems = [];
+      state.quantity = 0;
+      state.totalPrice = 0;
     },
     addToCart: {
       reducer: (state, action) => {
