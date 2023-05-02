@@ -11,6 +11,7 @@ export default function CartView() {
   const cartProductArray = cartItems.map((item) => {
     return (
       <CartProduct
+        id={item.id}
         name={item.name}
         price={item.price * 0.5}
         imgURL={item.imgURL}

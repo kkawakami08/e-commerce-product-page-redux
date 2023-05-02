@@ -64,8 +64,20 @@ const cartSlice = createSlice({
         return { payload: { id, name, price, imgURL, quantity } };
       },
     },
-    removeFromCart: (state, action) => {
-      state.cartItems.filter((item) => item.id !== action.payload.id);
+    removeFromCart: {
+      reducer: (state, action) => {
+        state.quantity -= action.payload.quantity;
+
+        state.totalPrice -= action.payload.price * action.payload.quantity;
+
+        const foundItemIndex = state.cartItems.findIndex(
+          (product) => action.payload.id === product.id
+        );
+        state.cartItems.splice(foundItemIndex, 1);
+      },
+      prepare: (id, name, price, quantity) => {
+        return { payload: { id, name, price, quantity } };
+      },
     },
   },
 });

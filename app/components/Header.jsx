@@ -105,10 +105,16 @@ export default function Header() {
         <div className="flex gap-5 md:gap-10 items-center">
           <div className="relative">
             <div
-              className="w-6 flex items-center justify-center hover:cursor-pointer md:w-7"
+              className="w-10 flex items-center justify-center hover:cursor-pointer md:w-7 "
               onClick={toggleCartMenu}
             >
-              <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
+              <Image
+                src={cartIcon}
+                alt="Cart icon"
+                width={500}
+                height={500}
+                className="w-6"
+              />
             </div>
             {/* cart item quantity */}
             {quantity !== 0 && (
