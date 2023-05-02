@@ -7,8 +7,8 @@ export default function Counter({ quantity, setQuantity }) {
     setQuantity((prevQuantity) => (prevQuantity += 1));
   };
   const decrementQuantity = () => {
-    if (quantity == 0) {
-      setQuantity(0);
+    if (quantity == 1) {
+      setQuantity(1);
     } else {
       setQuantity((prevQuantity) => (prevQuantity -= 1));
     }

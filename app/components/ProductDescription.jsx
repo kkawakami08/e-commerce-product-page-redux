@@ -8,7 +8,7 @@ import { addToCart } from "../GlobalRedux/Features/cartSlice";
 export default function ProductDescription({ product }) {
   const { name, description, price, id } = product;
   const imgURL = product.imagesURLs[0];
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   return (
     <div className="p-5 flex flex-col gap-6 w-screen pb-36">
