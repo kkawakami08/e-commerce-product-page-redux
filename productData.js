@@ -9,4 +9,5 @@ export const product = {
     "/images/image-product-3.jpg",
     "/images/image-product-4.jpg",
   ],
+  id: 1,
 };

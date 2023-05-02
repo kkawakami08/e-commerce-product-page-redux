@@ -6,9 +6,11 @@ import logo from "../../public/images/logo.svg";
 import cartIcon from "../../public/images/icon-cart.svg";
 import closeIcon from "../../public/images/icon-close.svg";
 import profileImage from "../../public/images/image-avatar.png";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { quantity } = useSelector((state) => state.cart);
 
   const handleOnClick = () => {
     setToggleMenu((prev) => !prev);
@@ -100,9 +102,12 @@ export default function Header() {
               <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
             </div>
             {/* cart item quantity */}
-            <div className="bg-primaryOrange flex items-center justify-center rounded-lg absolute bottom-3  -right-2  w-5 md:bottom-4 md:w-5">
-              <p className="text-white text-xs font-normal">3</p>
-            </div>
+            {quantity !== 0 && (
+              <div className="bg-primaryOrange flex items-center justify-center rounded-lg absolute bottom-3  -right-2  w-5 md:bottom-4 md:w-5">
+                <p className="text-white text-xs font-normal">{quantity}</p>
+              </div>
+            )}
+
             {/* end cart item quantity */}
           </div>
           <div className="w-7 flex items-center justify-center md:w-10   ">
