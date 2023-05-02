@@ -4,14 +4,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: [],
-  quantity: 0,
+  quantity: 1,
   totalPrice: 0,
+  visible: false,
 };
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    toggleCart: (state) => {
+      state.visible = !state.visible;
+    },
     emptyCart: (state) => {
       state.cartItems = [];
     },
@@ -40,7 +44,8 @@ const cartSlice = createSlice({
   },
 });
 
-export const { emptyCart, addToCart, removeFromCart } = cartSlice.actions;
+export const { emptyCart, addToCart, removeFromCart, toggleCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;
 
 //add/remove item to cart, increase/decrease quantity of item in cart

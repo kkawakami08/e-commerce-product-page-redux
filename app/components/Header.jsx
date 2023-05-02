@@ -6,14 +6,20 @@ import logo from "../../public/images/logo.svg";
 import cartIcon from "../../public/images/icon-cart.svg";
 import closeIcon from "../../public/images/icon-close.svg";
 import profileImage from "../../public/images/image-avatar.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleCart } from "../GlobalRedux/Features/cartSlice";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const { quantity } = useSelector((state) => state.cart);
+  const { quantity, visible } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   const handleOnClick = () => {
     setToggleMenu((prev) => !prev);
+  };
+
+  const toggleCartMenu = () => {
+    dispatch(toggleCart());
   };
 
   return (
@@ -98,7 +104,10 @@ export default function Header() {
         </div>
         <div className="flex gap-5 md:gap-10 items-center">
           <div className="relative">
-            <div className="w-6 flex items-center justify-center hover:cursor-pointer md:w-7">
+            <div
+              className="w-6 flex items-center justify-center hover:cursor-pointer md:w-7"
+              onClick={toggleCartMenu}
+            >
               <Image src={cartIcon} alt="Cart icon" width={500} height={500} />
             </div>
             {/* cart item quantity */}

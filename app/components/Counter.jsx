@@ -14,8 +14,11 @@ export default function Counter({ quantity, setQuantity }) {
     }
   };
   return (
-    <div className="flex items-center w-full bg-lightGrayishBlue rounded-lg p-7 justify-between h-10">
-      <div className=" px-10 py-5" onClick={decrementQuantity}>
+    <div className="flex items-center w-full bg-lightGrayishBlue rounded-lg p-7 justify-between h-10 ">
+      <div
+        className=" px-10 py-5 hover:cursor-pointer"
+        onClick={decrementQuantity}
+      >
         <Image
           src={minusIcon}
           alt="Minus Icon"
@@ -26,7 +29,10 @@ export default function Counter({ quantity, setQuantity }) {
       </div>
       {/* reQuantity variable */}
       <p className="font-bold">{quantity}</p>
-      <div className="px-10 py-5" onClick={incrementQuantity}>
+      <div
+        className="px-10 py-5 hover:cursor-pointer"
+        onClick={incrementQuantity}
+      >
         <Image
           src={plusIcon}
           alt="Plus Icon"

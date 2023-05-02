@@ -20,13 +20,9 @@ export default function ProductDescription({ product }) {
       <ProductPrice price={price} />
       <Counter quantity={quantity} setQuantity={setQuantity} />
       <div
-        className="w-full bg-primaryOrange p-4 rounded-lg flex items-center gap-5 justify-center shadow-lg shadow-primaryOrange/20"
+        className="w-full bg-primaryOrange p-4 rounded-lg flex items-center gap-5 justify-center shadow-lg shadow-primaryOrange/20 hover:cursor-pointer"
         onClick={() => {
-          if (quantity === 0) {
-            console.log("Nothing added");
-          } else {
-            dispatch(addToCart(id, name, price, imgURL, quantity));
-          }
+          dispatch(addToCart(id, name, price, imgURL, quantity));
         }}
       >
         <svg

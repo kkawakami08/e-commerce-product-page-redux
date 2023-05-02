@@ -1,14 +1,17 @@
 "use client";
-import { useState } from "react";
-
+import CartView from "./components/CartView";
 import MobileImages from "./components/MobileImages";
 import { product } from "../productData";
 import ProductDescription from "./components/ProductDescription";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  console.log(product.imagesURLs);
+  const { visible } = useSelector((state) => state.cart);
+  console.log(visible);
   return (
-    <main>
+    <main className="relative">
+      {visible && <CartView />}
+
       <div className="md:hidden">
         <MobileImages imageArray={product.imagesURLs} />
       </div>
