@@ -1,11 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 //cartItems: [{id, title, price, img, quantity}]
+// {
+//     cart: {
+//       cartItems: [
+//         {
+//           id: 1,
+//           name: 'Fall Limited Edition Sneakers',
+//           price: 250,
+//           imgURL: '/images/image-product-1.jpg',
+//           quantity: 1
+//         }
+//       ],
+//       quantity: 1,
+//       totalPrice: 125,
+//       visible: false
+//     }
+//   }
 
 const initialState = {
-  cartItems: [],
-  quantity: 1,
-  totalPrice: 0,
+  cartItems: [
+    {
+      id: 2,
+      name: "Orange Sneakers",
+      price: 440,
+      imgURL: "/images/image-product-2.jpg",
+      quantity: 3,
+    },
+  ],
+  quantity: 3,
+  totalPrice: 660,
   visible: false,
 };
 

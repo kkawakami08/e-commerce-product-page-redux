@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="relative md:border-b-2 ">
+    <nav className=" md:border-b-2 bg-white w-full">
       {/* mobile menu popup */}
       {toggleMenu && (
         <div className="bg-black/75 absolute h-screen w-screen z-10">

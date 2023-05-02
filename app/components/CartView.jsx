@@ -3,8 +3,17 @@ import { useSelector } from "react-redux";
 import CartProduct from "./CartProduct";
 
 export default function CartView() {
-  const { quantity } = useSelector((state) => state.cart);
-  console.log(quantity);
+  const { quantity, cartItems } = useSelector((state) => state.cart);
+  const cartProductArray = cartItems.map((item) => {
+    return (
+      <CartProduct
+        name={item.name}
+        price={item.price * 0.5}
+        imgURL={item.imgURL}
+        quantity={item.quantity}
+      />
+    );
+  });
   return (
     <div className="absolute top-0 bg-transparent z-10 w-full ">
       <div className="bg-white m-2 rounded-lg p-5 flex flex-col gap-5">
@@ -17,7 +26,7 @@ export default function CartView() {
           </div>
         ) : (
           <div className=" rounded-b-lg flex flex-col gap-5 justify-center">
-            <CartProduct />
+            {cartProductArray}
             <div className="bg-primaryOrange w-full flex items-center justify-center p-4 rounded-lg">
               <p className="font-bold text-white">Checkout</p>
             </div>

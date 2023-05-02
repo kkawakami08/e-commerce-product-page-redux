@@ -7,9 +7,8 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const { visible } = useSelector((state) => state.cart);
-  console.log(visible);
   return (
-    <main className="relative">
+    <main className="relative ">
       {visible && <CartView />}
 
       <div className="md:hidden">
