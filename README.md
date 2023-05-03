@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-Commerce Product Page
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Overview](#overview) -[Task](#task) -[Links](#links)
+- [Process](#process) -[Tools](#tools-used) -[What I learned](#what-i-learned) -[Project adjustments](#project-adjustments)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Task
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Recreate the design as close as possible given the style guide.
+- Create a mobile/desktop version of the site
+- Utilize hover states
+- Switch the larger product image by clicking on smaller thumbnails
+- Add items to cart
+- Remove items from cart
+- View contents of cart
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
+### Links
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Github Repo:](https://github.com/kkawakami08/e-commerce-product-page-redux)
+- [Live Site:](https://e-commerce-product-page-redux.vercel.app/)
 
-## Learn More
+## Process
 
-To learn more about Next.js, take a look at the following resources:
+### Tools Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Mobile-first workflow
+- React
+- Redux / Redux Toolkit
+- Next.js 13
+- Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### What I learned
 
-## Deploy on Vercel
+This is my first project using Redux state management so it was challenging at first but was very beneficial in helping me understand how to use it, and how much easier Redux is with Redux Toolkit! I also used React state management (useState) for components that were passing a small amount of data as props.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Project adjustments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- I added the total amount of the cart to the cart view
+- I initalize the project with items already in the cart to show the cart's functionality is working
