@@ -16,6 +16,7 @@ export default function CartView() {
         price={item.price * 0.5}
         imgURL={item.imgURL}
         quantity={item.quantity}
+        key={item.id}
       />
     );
   });

@@ -14,6 +14,7 @@ export default function MobileImages({ imageArray }) {
         imageIndex={imageIndex}
         imageArray={imageArray}
         id={imageCount}
+        key={imageCount}
       />
     );
   });
