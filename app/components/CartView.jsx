@@ -23,7 +23,7 @@ export default function CartView() {
     <div className="absolute top-0 bg-transparent z-10 w-full md:w-96 md:-top-5 md:right-10 md:drop-shadow-lg">
       <div className="bg-white m-2 rounded-lg p-5 flex flex-col gap-5">
         <p className="font-bold">Cart</p>
-        <hr />
+        <hr className="bg-white" />
         {quantity === 0 ? (
           <div className=" h-44 rounded-b-lg flex items-center justify-center">
             <p className="font-bold text-darkGrayishBlue">
