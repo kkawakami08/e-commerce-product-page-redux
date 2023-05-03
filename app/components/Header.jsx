@@ -11,7 +11,7 @@ import { toggleCart } from "../GlobalRedux/Features/cartSlice";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const { quantity, visible } = useSelector((state) => state.cart);
+  const { quantity } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleOnClick = () => {
@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <nav className=" md:border-b-2 bg-white w-full">
+    <nav className=" md:border-b-2 bg-white w-full md:px-20">
       {/* mobile menu popup */}
       {toggleMenu && (
         <div className="bg-black/75 absolute h-screen w-screen z-10">

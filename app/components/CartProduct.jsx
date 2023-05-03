@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { removeFromCart } from "../GlobalRedux/Features/cartSlice";
 
 export default function CartProduct({ name, price, imgURL, quantity, id }) {
-  console.log(price);
   const dispatch = useDispatch();
   return (
     <div className="flex items-center justify-between  w-full gap-5">

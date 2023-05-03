@@ -20,7 +20,7 @@ export default function CartView() {
     );
   });
   return (
-    <div className="absolute top-0 bg-transparent z-10 w-full ">
+    <div className="absolute top-0 bg-transparent z-10 w-full md:w-96 md:-top-5 md:right-10 md:drop-shadow-lg">
       <div className="bg-white m-2 rounded-lg p-5 flex flex-col gap-5">
         <p className="font-bold">Cart</p>
         <hr />
